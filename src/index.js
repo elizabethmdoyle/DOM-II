@@ -19,8 +19,16 @@ once selected, functions need to be created for each event
 each function will have a corresponding event listener, to be tied to the event happening inside of the function
 */
 
-//mouseover logo event
+//ensures site is working
 
+console.log('hello world');
 
+//load event (loads when user loads window - written like a click handler)
+window.onload = function(event) {
+    console.log(`event ${event.type} fired! Ready to go!`)
+    const heading = document.querySelector('h1')
+    heading.textContent = "Ready to go!"
+    console.log(heading)
+};
+  
 
-const logo = document.querySelector('.logo-heading');
