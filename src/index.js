@@ -29,10 +29,38 @@ window.onload = function(event) {
     const heading = document.querySelector('h1')
     heading.textContent = "Ready to go!"
     console.log(heading)
+//copy
+    window.addEventListener('copy', () => {
+        navigator.clipboard.readText()
+            .then(text => { 
+               // console.log(text)
+            heading.textContent += text 
+            })
+        
+    })
 };
   
- function changeColor(event) {
-    const background = document.querySelector('.home');
-    
-}
 
+//mirror on click
+
+document.body.addEventListener('click', evt => {
+    evt.target.classList.toggle('mirror')
+})
+
+//dblclick
+
+document.body.addEventListener('dblclick', evt => {
+    evt.target.innerHTML = '';
+})
+
+//keydown
+
+window.addEventListener('keydown', evt => {
+    console.log(evt);
+    if (evt.key === '6') {
+        document.body.innerHTML = 'You ran order 66';
+    }
+})
+
+
+ 
