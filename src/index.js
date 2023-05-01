@@ -58,9 +58,34 @@ document.body.addEventListener('dblclick', evt => {
 window.addEventListener('keydown', evt => {
     console.log(evt);
     if (evt.key === '6') {
-        document.body.innerHTML = 'You ran order 66';
+        document.body.innerHTML = '<h1>You ran order 66</h1>';
     }
 })
 
+//mousemove
+
+document.body.addEventListener('mouseover', evt => {
+    const {clientX, clientY} = evt
+    console.log(`Mouse is at ${clientX} , ${clientY}`)
+
+
+})
+
+//mouseenter and mouseleave
+
+
+const destinations = document.querySelectorAll('.destination');
+for (let destination of destinations) {
+    destination.addEventListener('mouseenter', evt => {
+        destination.style.fontWeight = 'bold';
+    })
+
+    destination.addEventListener('mouseleave', evt => {
+        setTimeout( () => {
+        destination.style.fontWeight = '';
+        }, 500)
+    })
+}
+                                                                                       
 
  
