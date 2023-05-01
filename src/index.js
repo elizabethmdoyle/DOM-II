@@ -31,4 +31,8 @@ window.onload = function(event) {
     console.log(heading)
 };
   
+ function changeColor(event) {
+    const background = document.querySelector('.home');
+    
+}
 
